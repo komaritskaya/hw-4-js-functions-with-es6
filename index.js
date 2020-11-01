@@ -106,12 +106,14 @@ console.log(sum(1,3,5,7)); // 16
 // 9
 
 const countDown = (number) => {
-  if (number <= 0) { 
-    console.log(0);
-  } else {
-  console.log(number);
-  countDown(number - 1);
-  }
+  setTimeout(() => {
+    if (number <= 0) {
+      console.log(0);
+    } else {
+      console.log(number);
+      countDown(number - 1);
+    }
+  }, 1000)
 }
 
 // Test:
